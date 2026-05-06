@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e5ddd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    width: 400px;
+    height: 85vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.app-header {
+    background: #075e54;
+    color: white;
+    padding: 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.login-bar {
+    background: #f0f2f5;
+    padding: 10px;
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+.login-bar input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.login-bar button {
+    padding: 8px 12px;
+    border: none;
+    background: #128c7e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.chat {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background: #e5ddd5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bubble {
+    max-width: 75%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.bubble-in {
+    align-self: flex-start;
+    background: white;
+}
+
+.bubble-out {
+    align-self: flex-end;
+    background: #dcf8c6;
+}
+
+.sender {
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.bubble img {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.input-bar {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background: #f0f2f5;
+    border-top: 1px solid #ddd;
+}
+
+.input-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    outline: none;
+}
+
+.send-btn,
+.img-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-btn {
+    background: #128c7e;
+}
+
+.img-btn {
+    background: #25d366;
+}
+
+#status {
+    font-weight: bold;
+}
+
+#status.connected {
+    color: #c3f;
+}
+
+#status.disconnected {
+    color: #fbb;
+}
